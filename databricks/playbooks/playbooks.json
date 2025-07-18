@@ -1,0 +1,145 @@
+{
+  "type": "workflow_collections",
+  "data": [
+    {
+      "@type": "WorkflowCollection",
+      "name": "Sample - Databricks - 1.0.0",
+      "description": "Run SELECT Query on Databricks Cluster",
+      "visible": true,
+      "image": "data:image/png;base64,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",
+      "uuid": "854bcf79-c8c4-4d41-9dd3-b6f47cfbb873",
+      "id": 87,
+      "deletedAt": null,
+      "importedBy": [],
+      "recordTags": [],
+      "workflows": [
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Run Query",
+          "aliasName": null,
+          "tag": null,
+          "description": "Run SELECT Query on Databricks Cluster",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1750779805,
+          "collection": "/api/3/workflow_collections/854bcf79-c8c4-4d41-9dd3-b6f47cfbb873",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/950b6437-7050-465e-9325-e2e3efbc7dc5",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Query",
+              "description": null,
+              "arguments": {
+                "query": "SELECT * FROM hive_metastore.fortisoar_test.sailpoint_identities WHERE email = 'jane.smith@company.com'"
+              },
+              "status": null,
+              "top": "140",
+              "left": "200",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "65e78894-151f-485f-b5d8-2ad0b9dfdf52"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Run Query",
+              "description": null,
+              "arguments": {
+                "name": "Databricks",
+                "config": "af1d69f6-60e2-4cd0-acf3-9ad05e9c542f",
+                "params": {
+                  "query_string": "{{vars.query}}"
+                },
+                "version": "1.0.0",
+                "connector": "databricks",
+                "operation": "run_query",
+                "operationTitle": "Run Query",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "240",
+              "left": "360",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "ef72b3c6-f320-4473-ac04-1ee36ed484a7"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "route": "a6460075-a4ec-49e2-a329-0606bd54de51",
+                "resources": [
+                  "alerts"
+                ],
+                "__triggerLimit": true,
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "params": [],
+                    "records": "{{vars.input.records}}"
+                  }
+                },
+                "triggerOnSource": true,
+                "executeButtonText": "Execute",
+                "noRecordExecution": true,
+                "showToasterMessage": {
+                  "visible": false,
+                  "messageVisible": true
+                },
+                "triggerOnReplicate": false,
+                "singleRecordExecution": false
+              },
+              "status": null,
+              "top": "40",
+              "left": "40",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+              "group": null,
+              "uuid": "950b6437-7050-465e-9325-e2e3efbc7dc5"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Query -> Run Query",
+              "targetStep": "/api/3/workflow_steps/ef72b3c6-f320-4473-ac04-1ee36ed484a7",
+              "sourceStep": "/api/3/workflow_steps/65e78894-151f-485f-b5d8-2ad0b9dfdf52",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "d1c1272a-16ec-4571-9474-9a51a9877ff5"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Query",
+              "targetStep": "/api/3/workflow_steps/65e78894-151f-485f-b5d8-2ad0b9dfdf52",
+              "sourceStep": "/api/3/workflow_steps/950b6437-7050-465e-9325-e2e3efbc7dc5",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "58b14182-220f-4ee7-9b6a-0e28cb928ea9"
+            }
+          ],
+          "groups": [],
+          "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
+          "uuid": "e87756e0-92fb-4ca9-9fa7-0ffb08bb4532",
+          "id": 953,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": []
+        }
+      ]
+    }
+  ],
+  "exported_tags": []
+}
