@@ -1,0 +1,145 @@
+{
+  "type": "workflow_collections",
+  "data": [
+    {
+      "@type": "WorkflowCollection",
+      "name": "Sample - Databricks - 1.0.0",
+      "description": "Run SELECT Query on Databricks Cluster",
+      "visible": true,
+      "image": null,
+      "uuid": "854bcf79-c8c4-4d41-9dd3-b6f47cfbb873",
+      "id": 87,
+      "deletedAt": null,
+      "importedBy": [],
+      "recordTags": [],
+      "workflows": [
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Run Query",
+          "aliasName": null,
+          "tag": null,
+          "description": "Run SELECT Query on Databricks Cluster",
+          "isActive": false,
+          "debug": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1750779805,
+          "collection": "/api/3/workflow_collections/854bcf79-c8c4-4d41-9dd3-b6f47cfbb873",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/950b6437-7050-465e-9325-e2e3efbc7dc5",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Query",
+              "description": null,
+              "arguments": {
+                "query": "SELECT * FROM hive_metastore.fortisoar_test.sailpoint_identities WHERE email = 'jane.smith@company.com'"
+              },
+              "status": null,
+              "top": "140",
+              "left": "200",
+              "stepType": "/api/3/workflow_step_types/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+              "group": null,
+              "uuid": "65e78894-151f-485f-b5d8-2ad0b9dfdf52"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Run Query",
+              "description": null,
+              "arguments": {
+                "name": "Databricks",
+                "config": "af1d69f6-60e2-4cd0-acf3-9ad05e9c542f",
+                "params": {
+                  "query_string": "{{vars.query}}"
+                },
+                "version": "1.0.0",
+                "connector": "databricks",
+                "operation": "run_query",
+                "operationTitle": "Run Query",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "240",
+              "left": "360",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "group": null,
+              "uuid": "ef72b3c6-f320-4473-ac04-1ee36ed484a7"
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "route": "a6460075-a4ec-49e2-a329-0606bd54de51",
+                "resources": [
+                  "alerts"
+                ],
+                "__triggerLimit": true,
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "params": [],
+                    "records": "{{vars.input.records}}"
+                  }
+                },
+                "triggerOnSource": true,
+                "executeButtonText": "Execute",
+                "noRecordExecution": true,
+                "showToasterMessage": {
+                  "visible": false,
+                  "messageVisible": true
+                },
+                "triggerOnReplicate": false,
+                "singleRecordExecution": false
+              },
+              "status": null,
+              "top": "40",
+              "left": "40",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+              "group": null,
+              "uuid": "950b6437-7050-465e-9325-e2e3efbc7dc5"
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Query -> Run Query",
+              "targetStep": "/api/3/workflow_steps/ef72b3c6-f320-4473-ac04-1ee36ed484a7",
+              "sourceStep": "/api/3/workflow_steps/65e78894-151f-485f-b5d8-2ad0b9dfdf52",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "d1c1272a-16ec-4571-9474-9a51a9877ff5"
+            },
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Query",
+              "targetStep": "/api/3/workflow_steps/65e78894-151f-485f-b5d8-2ad0b9dfdf52",
+              "sourceStep": "/api/3/workflow_steps/950b6437-7050-465e-9325-e2e3efbc7dc5",
+              "label": null,
+              "isExecuted": false,
+              "group": null,
+              "uuid": "58b14182-220f-4ee7-9b6a-0e28cb928ea9"
+            }
+          ],
+          "groups": [],
+          "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "playbookOrigin": "/api/3/picklists/15c1e8c9-22bf-4e66-8fbb-0a502d4a4a3f",
+          "isEditable": true,
+          "uuid": "e87756e0-92fb-4ca9-9fa7-0ffb08bb4532",
+          "id": 953,
+          "owners": [],
+          "isPrivate": false,
+          "deletedAt": null,
+          "importedBy": [],
+          "recordTags": []
+        }
+      ]
+    }
+  ],
+  "exported_tags": []
+}

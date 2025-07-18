@@ -1,0 +1,96 @@
+{
+  "name": "databricks",
+  "version": "1.0.0",
+  "label": "Databricks",
+  "description": "Query an Azure Databricks Cluster table in a catalog's schema (database). Uses Databricks SQL Connector for Python.",
+  "contributor": "Philip George",
+  "publisher": "Fortinet ETAC",
+  "icon_small_name": "small.png",
+  "icon_large_name": "large.png",
+  "category": "Database",
+  "configuration": {
+    "fields": [
+      {
+        "title": "Databricks Server Hostname",
+        "type": "text",
+        "name": "databricks_server_hostname",
+        "required": true,
+        "visible": true,
+        "editable": true,
+        "value": "",
+        "description": "The server hostname of the all-purpose compute or SQL warehouse. You can get this from the Server Hostname value in the Advanced Options > JDBC/ODBC tab for your all-purpose compute or Connection Details tab for your SQL warehouse.",
+        "tooltip": "The server hostname of the all-purpose compute or SQL warehouse. You can get this from the Server Hostname value in the Advanced Options > JDBC/ODBC tab for your all-purpose compute or Connection Details tab for your SQL warehouse."
+      },
+      {
+        "title": "Databricks HTTP Path",
+        "type": "text",
+        "name": "databricks_http_path",
+        "required": true,
+        "visible": true,
+        "editable": true,
+        "value": "",
+        "description": "The HTTP path of the all-purpose compute or the SQL warehouse. You can get this from the HTTP Path value in the Advanced Options > JDBC/ODBC tab for your all-purpose compute or the Connection Details tab for your SQL warehouse.",
+        "tooltip": "The HTTP path of the all-purpose compute or the SQL warehouse. You can get this from the HTTP Path value in the Advanced Options > JDBC/ODBC tab for your all-purpose compute or the Connection Details tab for your SQL warehouse."
+      },
+      {
+        "title": "Databricks Client ID",
+        "type": "text",
+        "name": "databricks_client_id",
+        "required": true,
+        "visible": true,
+        "editable": true,
+        "value": "",
+        "description": "Create a Databricks service principal in your Databricks workspace, and create an OAuth secret for that service principal. This will be the service principal's UUID or Application ID value.",
+        "tooltip": "Create a Databricks service principal in your Databricks workspace, and create an OAuth secret for that service principal. This will be the service principal's UUID or Application ID value."
+      },
+      {
+        "title": "Databricks Client Secret",
+        "type": "password",
+        "name": "databricks_client_secret",
+        "required": true,
+        "visible": true,
+        "editable": true,
+        "value": null,
+        "description": "Create a Databricks service principal in your Databricks workspace, and create an OAuth secret for that service principal. This will be the Secret value for the service principal's OAuth secret.",
+        "tooltip": "Create a Databricks service principal in your Databricks workspace, and create an OAuth secret for that service principal. This will be the Secret value for the service principal's OAuth secret."
+      }
+    ]
+  },
+  "operations": [
+    {
+      "title": "Run Query",
+      "operation": "run_query",
+      "description": "Executes a query on the database. You can execute any valid SQL query such as Create, Update, Delete, Insert or Select.",
+      "category": "investigation",
+      "annotation": "run_query",
+      "output_schema": [],
+      "parameters": [
+        {
+          "title": "Query String",
+          "type": "text",
+          "name": "query_string",
+          "required": true,
+          "visible": true,
+          "editable": true,
+          "value": "",
+          "tooltip": "Query that you want to trigger on the database. You can perform all sorts of operations such as Create, Update, Delete, Insert, or Select, on the database using this query."
+        }
+      ],
+      "enabled": true,
+      "open": false
+    }
+  ],
+  "active": true,
+  "cs_approved": false,
+  "cs_compatible": true,
+  "system": false,
+  "playbook_collections": [
+    {
+      "@id": "/api/3/workflow_collections/854bcf79-c8c4-4d41-9dd3-b6f47cfbb873",
+      "name": "Sample - Databricks - 1.0.0",
+      "image": "/api/3/images/87a809bc-812e-4541-a7c5-ba44bcc26876",
+      "description": "Run SELECT Query on Databricks Cluster"
+    }
+  ],
+  "help_online": "https://github.com/fortinet-fortisoar/connector-databricks/blob/release/1.0.0/docs/ConnectorDatabricksDoc.md"
+}
