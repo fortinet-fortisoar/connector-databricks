@@ -1,4 +1,4 @@
 --only-binary pyarrow
-pyarrow
+pyarrow==15.0.2
 databricks-sql-connector
 databricks-sdk
