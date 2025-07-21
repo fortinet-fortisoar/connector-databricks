@@ -1,3 +1,4 @@
+--only-binary pyarrow
+pyarrow
 databricks-sql-connector
 databricks-sdk
-pyarrow
