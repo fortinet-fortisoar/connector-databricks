@@ -11,7 +11,7 @@
   "configuration": {
     "fields": [
       {
-        "title": "Databricks Server Hostname",
+        "title": "Server Hostname",
         "type": "text",
         "name": "databricks_server_hostname",
         "required": true,
@@ -22,7 +22,7 @@
         "tooltip": "The server hostname of the all-purpose compute or SQL warehouse. You can get this from the Server Hostname value in the Advanced Options > JDBC/ODBC tab for your all-purpose compute or Connection Details tab for your SQL warehouse."
       },
       {
-        "title": "Databricks HTTP Path",
+        "title": "HTTP Path",
         "type": "text",
         "name": "databricks_http_path",
         "required": true,
@@ -33,7 +33,7 @@
         "tooltip": "The HTTP path of the all-purpose compute or the SQL warehouse. You can get this from the HTTP Path value in the Advanced Options > JDBC/ODBC tab for your all-purpose compute or the Connection Details tab for your SQL warehouse."
       },
       {
-        "title": "Databricks Client ID",
+        "title": "Client ID",
         "type": "text",
         "name": "databricks_client_id",
         "required": true,
@@ -44,7 +44,7 @@
         "tooltip": "Create a Databricks service principal in your Databricks workspace, and create an OAuth secret for that service principal. This will be the service principal's UUID or Application ID value."
       },
       {
-        "title": "Databricks Client Secret",
+        "title": "Client Secret",
         "type": "password",
         "name": "databricks_client_secret",
         "required": true,
