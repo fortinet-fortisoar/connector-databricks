@@ -17,7 +17,7 @@ logger = get_logger('databricks')
 
 class DatabricksSQLClient(object):
     def __init__(self, config):
-        self.hostname = config.get('databricks_server_hostname')
+        self.hostname = config.get('databricks_server_hostname').removeprefix('http://')
         self.http_path = config.get('databricks_http_path')
         self.client_id = config.get('databricks_client_id')
         self.client_secret = config.get('databricks_client_secret')
@@ -79,9 +79,9 @@ def run_query(config, params):
             result = [json.loads(json.dumps(dict(zip(columns, row)), default = handler)) for row in rows]
             return result
 
-    except Exception as e:
-        logger.exception('Databricks query failed: {e}'.format(e))
-        raise ConnectorError('Databricks query failed: {e}'.format(e))
+    except Exception as err:
+        logger.exception('Databricks query failed: {}'.format(err))
+        raise ConnectorError('Databricks query failed: {}'.format(err))
 
 
 def _check_health(config):
@@ -89,9 +89,9 @@ def _check_health(config):
         with DatabricksSQLClient(config) as client:
             client.execute("SHOW TABLES")
         return True
-    except Exception as e:
-        logger.exception('Databricks query failed: {e}'.format(e))
-        raise ConnectorError('Databricks query failed: {e}'.format(e))
+    except Exception as err:
+        logger.exception('Databricks query failed: {}'.format(err))
+        raise ConnectorError('Databricks query failed: {}'.format(err))
 
 
 operations = {
