@@ -17,7 +17,7 @@ logger = get_logger('databricks')
 
 class DatabricksSQLClient(object):
     def __init__(self, config):
-        self.hostname = config.get('databricks_server_hostname').removeprefix('http://')
+        self.hostname = config.get('databricks_server_hostname')
         self.http_path = config.get('databricks_http_path')
         self.client_id = config.get('databricks_client_id')
         self.client_secret = config.get('databricks_client_secret')
@@ -26,7 +26,7 @@ class DatabricksSQLClient(object):
 
     def _credential_provider(self):
         config = Config(
-            host = f"https://{self.hostname}" if not self.hostname.startswith("https://") else self.hostname,
+            host = self.hostname,
             client_id = self.client_id,
             client_secret = self.client_secret
         )
