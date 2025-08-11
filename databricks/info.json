@@ -1,6 +1,6 @@
 {
   "name": "databricks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "label": "Databricks",
   "description": "Query an Azure Databricks Cluster table in a catalog's schema (database). Uses Databricks SQL Connector for Python.",
   "contributor": "Philip George",
@@ -92,5 +92,5 @@
       "description": "Run SELECT Query on Databricks Cluster"
     }
   ],
-  "help_online": "https://github.com/fortinet-fortisoar/connector-databricks/blob/release/1.0.0/docs/ConnectorDatabricksDoc.md"
+  "help_online": "https://github.com/fortinet-fortisoar/connector-databricks/blob/release/1.0.1/docs/ConnectorDatabricksDoc.md"
 }

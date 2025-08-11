@@ -3,7 +3,7 @@
   "data": [
     {
       "@type": "WorkflowCollection",
-      "name": "Sample - Databricks - 1.0.0",
+      "name": "Sample - Databricks - 1.0.1",
       "description": "Run SELECT Query on Databricks Cluster",
       "visible": true,
       "image": null,
@@ -55,7 +55,7 @@
                 "params": {
                   "query_string": "{{vars.query}}"
                 },
-                "version": "1.0.0",
+                "version": "1.0.1",
                 "connector": "databricks",
                 "operation": "run_query",
                 "operationTitle": "Run Query",
