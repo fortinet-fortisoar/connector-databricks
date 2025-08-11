@@ -26,7 +26,7 @@ class DatabricksSQLClient(object):
 
     def _credential_provider(self):
         config = Config(
-            host = f"https://{self.hostname}" if not self.hostname.startswith("https://") else self.hostname,
+            host = self.hostname,
             client_id = self.client_id,
             client_secret = self.client_secret
         )
@@ -79,9 +79,9 @@ def run_query(config, params):
             result = [json.loads(json.dumps(dict(zip(columns, row)), default = handler)) for row in rows]
             return result
 
-    except Exception as e:
-        logger.exception('Databricks query failed: {e}'.format(e))
-        raise ConnectorError('Databricks query failed: {e}'.format(e))
+    except Exception as err:
+        logger.exception('Databricks query failed: {}'.format(err))
+        raise ConnectorError('Databricks query failed: {}'.format(err))
 
 
 def _check_health(config):
@@ -89,9 +89,9 @@ def _check_health(config):
         with DatabricksSQLClient(config) as client:
             client.execute("SHOW TABLES")
         return True
-    except Exception as e:
-        logger.exception('Databricks query failed: {e}'.format(e))
-        raise ConnectorError('Databricks query failed: {e}'.format(e))
+    except Exception as err:
+        logger.exception('Databricks query failed: {}'.format(err))
+        raise ConnectorError('Databricks query failed: {}'.format(err))
 
 
 operations = {
