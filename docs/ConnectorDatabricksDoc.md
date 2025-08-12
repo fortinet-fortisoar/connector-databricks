@@ -52,7 +52,7 @@ The following automated operations can be included in playbooks and you can also
 
  No output schema is available at this time.
 ## Included playbooks
-The `Sample - Databricks - 1.0.0` playbook collection comes bundled with the Databricks connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR<sup>TM</sup> after importing the Databricks connector.
+The `Sample - Databricks - 1.0.1` playbook collection comes bundled with the Databricks connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR<sup>TM</sup> after importing the Databricks connector.
 
 - Run Query
 
