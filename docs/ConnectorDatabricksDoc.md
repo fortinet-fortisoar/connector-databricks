@@ -4,12 +4,19 @@ Query an Azure Databricks Cluster table in a catalog's schema (database). Uses D
 
 ### Version information
 
-Connector Version: 1.0.0
+Connector Version: 1.0.1
 
 
 Authored By: Fortinet ETAC
 
 Certified: No
+
+## Release Notes for version 1.0.1
+The following enhancements have been made to the Databricks Connector in version 1.0.1:
+<ul>
+<li><p>Fixed an issue in the connector code where the server URL was not being validated correctly.</p></li>
+</ul>
+
 ## Installing the connector
 <p>From FortiSOAR&trade; 5.0.0 onwards, use the <strong>Connector Store</strong> to install the connector. For the detailed procedure to install a connector, click <a href="https://docs.fortinet.com/document/fortisoar/0.0.0/installing-a-connector/1/installing-a-connector" target="_top">here</a>.<br>You can also use the following <code>yum</code> command as a root user to install connectors from an SSH session:</p>
 `yum install cyops-connector-databricks`
@@ -45,7 +52,7 @@ The following automated operations can be included in playbooks and you can also
 
  No output schema is available at this time.
 ## Included playbooks
-The `Sample - databricks - 1.0.0` playbook collection comes bundled with the Databricks connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR<sup>TM</sup> after importing the Databricks connector.
+The `Sample - Databricks - 1.0.1` playbook collection comes bundled with the Databricks connector. These playbooks contain steps using which you can perform all supported actions. You can see bundled playbooks in the **Automation** > **Playbooks** section in FortiSOAR<sup>TM</sup> after importing the Databricks connector.
 
 - Run Query
 
