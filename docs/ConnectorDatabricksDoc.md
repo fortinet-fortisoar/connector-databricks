@@ -6,8 +6,9 @@ Query an Azure Databricks Cluster table in a catalog's schema (database). Uses D
 
 Connector Version: 1.0.1
 
-
 Authored By: Fortinet ETAC
+
+Contributor: Philip George
 
 Certified: No
 
