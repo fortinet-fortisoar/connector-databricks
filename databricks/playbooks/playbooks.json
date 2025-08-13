@@ -11,7 +11,9 @@
       "id": 87,
       "deletedAt": null,
       "importedBy": [],
-      "recordTags": [],
+      "recordTags": [
+        "Databricks"
+      ],
       "workflows": [
         {
           "@type": "Workflow",
