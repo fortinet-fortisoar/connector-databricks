@@ -67,6 +67,7 @@
       "parameters": [
         {
           "title": "Query String",
+          "description": "Query that you want to trigger on the database. You can perform all sorts of operations such as Create, Update, Delete, Insert, or Select, on the database using this query.",
           "type": "text",
           "name": "query_string",
           "required": true,
